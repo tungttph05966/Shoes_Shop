@@ -1,0 +1,58 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.1",
+    "express-mysql-session": "^2.1.6",
+    "file-type": "^12.1.0",
+    "grunt": "1.0.4",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "moment": "^2.24.0",
+    "moment-range": "^4.0.2",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.3.0",
+    "randomstring": "^1.1.5",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "sails": "^1.2.3",
+    "sails-hook-cron": "^3.0.0",
+    "sails-hook-grunt": "^4.0.0",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-mysql": "^1.0.1",
+    "slug": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "dev": "SET NODE_ENV=development && nodemon app.js",
+    "run-dev": "NODE_ENV=development && nodemon app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
+    "preshrinkwrap": "git checkout -- npm-shrinkwrap.json",
+    "postshrinkwrap": "git checkout -- npm-shrinkwrap.json",
+    "lift": "sails lift --drop"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shironeko/server.git"
+  },
+  "author": "shironeko",
+  "license": ""
+}

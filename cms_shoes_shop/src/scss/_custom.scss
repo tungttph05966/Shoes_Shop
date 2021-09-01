@@ -1,0 +1,11 @@
+// Here you can add other styles
+.react-date-picker__wrapper {
+    border: 0 none !important;
+    padding: 0 12px !important;
+}
+
+.date-picker-border {
+    .react-date-picker__wrapper {
+        border: thin solid gray !important;
+    }
+}
